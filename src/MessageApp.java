@@ -8,6 +8,7 @@ public class MessageApp {
         System.out.println("Для ввода сообщения нажмите 1, для ввода цыфр введите 2 :");
         Scanner scanner = new Scanner(System.in);
         int counter = scanner.nextInt();
+        scanner.nextLine();
         //       Message<String> str = new Message<>(scanner.nextLine());
 //        String string = str.getMessage();
         //System.out.println(string);
@@ -25,8 +26,9 @@ public class MessageApp {
 
             System.out.println(string);
 
-        }
-        if (counter == 2) {
+        } else if (counter == 2) {
+
+
             Message<Integer> integerMessage = new Message<>(scanner.nextInt());
             Integer integer = integerMessage.getMessage();
 
